@@ -23,3 +23,7 @@ pip install pandas openpyxl xlrd
 
 3. Don't change any sheet names or column names in input or SKU files.
 
+
+checkout:
+https://mudit-jain.medium.com/how-to-do-gcp-sizing-for-100s-of-vms-in-15-seconds-695afd9189c3
+https://youtu.be/VyT6Zkb52l4
