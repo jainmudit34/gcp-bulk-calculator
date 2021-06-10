@@ -92,8 +92,8 @@ pricing['Recommended VM family'] = pricing.apply(lambda _: 'n2', axis=1)
 
 
 uniq_pricing=pricing[['Region','Operating System','normalised CPU','Required Memory','Recommended VM family']].drop_duplicates().sort_values(by=['normalised CPU','Required Memory'])
-uniq_pricing=uniq_pricing[uniq_pricing['Required Memory'] <= 624]
-uniq_pricing=uniq_pricing[uniq_pricing['normalised CPU'] <= 96]
+uniq_pricing=uniq_pricing[uniq_pricing['Required Memory'] <= 640]
+uniq_pricing=uniq_pricing[uniq_pricing['normalised CPU'] <= 80]
 
 #uniq_pricing
 
