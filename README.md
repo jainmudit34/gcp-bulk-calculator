@@ -28,3 +28,5 @@ pip install pandas openpyxl xlrd
 checkout:
 https://mudit-jain.medium.com/how-to-do-gcp-sizing-for-100s-of-vms-in-15-seconds-695afd9189c3
 https://youtu.be/VyT6Zkb52l4
+
+**Please note the core count and memory should be intigers.** 
