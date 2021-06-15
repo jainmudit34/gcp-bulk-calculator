@@ -29,4 +29,6 @@ checkout:
 https://mudit-jain.medium.com/how-to-do-gcp-sizing-for-100s-of-vms-in-15-seconds-695afd9189c3
 https://youtu.be/VyT6Zkb52l4
 
+**Notes:**
 **Please note the core count and memory should be intigers.** 
+**Make sure there are no leading or trailing spaces in the OS names.**
