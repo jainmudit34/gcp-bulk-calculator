@@ -1,6 +1,5 @@
 # gcp-bulk-calculator
 
-****#Please dont use this Now. There is a bug. It will be fixed shortly.****
 
 
 
