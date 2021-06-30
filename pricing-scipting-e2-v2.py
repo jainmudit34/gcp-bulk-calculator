@@ -85,7 +85,7 @@ pricing["Required Memory"] = pricing["Required Memory"].fillna(pricing["calculat
 pricing["Required CPU"] = pricing["Required CPU"].fillna(pricing["calculated req vCPU"])
 
 
-pricing["Required Memory"]=round(pricing["Required CPU"])
+pricing["Required CPU"]=round(pricing["Required CPU"])
 pricing["Required Memory"]=round(pricing["Required Memory"])
 
 pricing['normalised CPU'] = pricing['Required CPU'].apply(lambda x: (x+1) if ((x%2!=0.0) & (x!=1.0) &(x<=7.0)) else x)
