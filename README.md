@@ -31,4 +31,4 @@ https://youtu.be/VyT6Zkb52l4
 **Notes:**
 **Please note the core count and memory should be intigers.** 
 **Make sure there are no leading or trailing spaces in the OS names.**
-**Please use Required CPU	Required Memory![image](https://user-images.githubusercontent.com/22167244/134287526-a38cda3d-abfe-4671-96da-3183cee8601f.png) instead of letting tool calculate it, there is some bug**
+**Please use "Required CPU" &	"Required Memory"![image](https://user-images.githubusercontent.com/22167244/134287526-a38cda3d-abfe-4671-96da-3183cee8601f.png) instead of letting tool calculate it, there is some bug**
