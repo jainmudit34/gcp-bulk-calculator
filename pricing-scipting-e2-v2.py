@@ -66,27 +66,28 @@ source_license_pricing = source_license_pricing.apply(lambda x: x.str.lower() if
 
 
 
-pricing["calculated req vCPU"]=(pricing["Number of CPUs"]*pricing["Core Count"]*pricing["CPU Utilisation % preferably P95"]*0.016).round()
+pricing["calculated req vCPU"]=(pricing["Number of CPUs"]*pricing["Core Count"]*pricing["CPU Utilisation % preferably P95"]*0.014)
 pricing.dropna(subset=["calculated req vCPU","Required CPU"], how='all',inplace=True)
 pricing
-
+#0.014 to have target state utilisation as 75% peak
 
 # In[59]:
 
 
-pricing["calculated req Memory"]=(pricing["Memory GiB"]*pricing["Memory Utilisation % preferably P95"]*0.016).round()
+pricing["calculated req Memory"]=(pricing["Memory GiB"]*pricing["Memory Utilisation % preferably P95"]*0.014)
+
 pricing.dropna(subset=["calculated req Memory","Required Memory"], how='all',inplace=True)
 
 
 # In[60]:
 
 
-pricing["Required Memory"] = pricing["Required Memory"].fillna(pricing["calculated req Memory"])
-pricing["Required CPU"] = pricing["Required CPU"].fillna(pricing["calculated req vCPU"])
+pricing["Required Memory"] = pricing["Required Memory"].fillna(pricing["calculated req Memory"]).apply(math.ceil)
+pricing["Required CPU"] = pricing["Required CPU"].fillna(pricing["calculated req vCPU"]).apply(math.ceil)
 
 
-pricing["Required CPU"]=round(pricing["Required CPU"])
-pricing["Required Memory"]=round(pricing["Required Memory"])
+pricing["Required CPU"]=(pricing["Required CPU"]).apply(math.ceil)
+pricing["Required Memory"]=(pricing["Required Memory"]).apply(math.ceil)
 
 pricing['normalised CPU'] = pricing['Required CPU'].apply(lambda x: (x+1) if ((x%2!=0.0) & (x!=1.0) &(x<=7.0)) else x)
 pricing['Required CPU'] = pricing['Required CPU'].apply(lambda x: (x-1) if ((x%2!=0.0) & (x!=1.0) &(x>=9.0)) else x)
