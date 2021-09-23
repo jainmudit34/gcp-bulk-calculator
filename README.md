@@ -29,6 +29,5 @@ https://mudit-jain.medium.com/how-to-do-gcp-sizing-for-100s-of-vms-in-15-seconds
 https://youtu.be/VyT6Zkb52l4
 
 **Notes:**
-**Please note the core count and memory should be intigers.** 
+**Please note the core count and memory should be intigers/floats.** 
 **Make sure there are no leading or trailing spaces in the OS names.**
-**Please use "Required CPU" &	"Required Memory"![image](https://user-images.githubusercontent.com/22167244/134287526-a38cda3d-abfe-4671-96da-3183cee8601f.png) instead of letting tool calculate it, there is a bug I will fix shortly**
